@@ -1,6 +1,3 @@
-"use client";
-
-import { Capacitor } from "@capacitor/core";
 import Link from "next/link";
 
 export default function Page() {
@@ -8,10 +5,8 @@ export default function Page() {
     <>
       <div className="bg-red-300">asd</div>
       <div className="mt-64">
-        <Link href={`/hello`}>to hello</Link>
+        <Link href={`/`}>to home</Link>
       </div>
-
-      {Capacitor.getPlatform()}
     </>
   );
 }
