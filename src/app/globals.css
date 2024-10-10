@@ -8,9 +8,9 @@
 }
 
 @supports(padding:max(0px)) {
-    body {
-        padding-top: env(safe-area-inset-top);
-    }
+  body {
+    padding-top: env(safe-area-inset-top);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

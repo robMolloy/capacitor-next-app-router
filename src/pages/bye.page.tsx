@@ -3,9 +3,12 @@ import Link from "next/link";
 export default function Page() {
   return (
     <>
-      <div className="bg-red-300">asd</div>
+      <div className="bg-yellow-300">asd</div>
       <div className="mt-64">
         <Link href={`/`}>to home</Link>
+        <br />
+        <br />
+        <Link href={`/hello`}>to hello</Link>
       </div>
     </>
   );

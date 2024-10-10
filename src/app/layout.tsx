@@ -1,5 +1,12 @@
 import "./globals.css";
+import type { Viewport } from "next";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -7,12 +14,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="viewport"
-          content="viewport-fit=cover, width=device-width, initial-scale=1"
-        />
-      </head>
       <body>{children}</body>
     </html>
   );

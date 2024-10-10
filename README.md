@@ -50,3 +50,28 @@ export default config;
 - using the command `npx cap copy` will copy the capacitor config to the native app
 
 - when dependencies change run `npx cap sync` to update
+
+## Next14 - safe area css
+
+- you will need to add `<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1" />` and make `env(safe-area-inset-top)` available use the following in global css.
+
+```css
+@supports (padding: max(0px)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+```
+
+- app directory - use object notation to describe the meta ta found in layout.tsx and [here](https://nextjs.org/docs/app/api-reference/functions/generate-viewport#width-initialscale-maximumscale-and-userscalable) or follow the extract below;
+
+```ts
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+};
+```
+
+- pages directory - use next/head `<Head>` tag with the above `<meta ...>` viewport as the children inside the \_app.page.tsx file. Also add the `<Head />` tag to the document but without any children.
