@@ -1,3 +1,4 @@
+import { StoreController } from "@/stores/StoreController";
 import Link from "next/link";
 
 export default function Page() {
@@ -9,6 +10,10 @@ export default function Page() {
         <br />
         <br />
         <Link href={`/bye`}>to bye</Link>
+
+        <br />
+        <br />
+        <StoreController />
       </div>
     </>
   );

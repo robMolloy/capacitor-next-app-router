@@ -1,5 +1,9 @@
 # capacitor nextjs app router walkthrough
 
+## unresolved
+
+- dynamic routes???
+
 ## prerequisites
 
 - install cocoapods with `brew install cocoapods`
@@ -75,3 +79,8 @@ export const viewport: Viewport = {
 ```
 
 - pages directory - use next/head `<Head>` tag with the above `<meta ...>` viewport as the children inside the \_app.page.tsx file. Also add the `<Head />` tag to the document but without any children.
+
+## zustand
+
+- zustand stores will not persist state when going from page router to app router pages
+- there is scope to use a singleton pattern but better to convert all pages to app router

@@ -1,6 +1,6 @@
 "use client";
 
-import { Capacitor } from "@capacitor/core";
+import { StoreController } from "@/stores/StoreController";
 import Link from "next/link";
 
 export default function Page() {
@@ -12,9 +12,11 @@ export default function Page() {
         <br />
         <br />
         <Link href={`/bye`}>to bye</Link>
-      </div>
 
-      {Capacitor.getPlatform()}
+        <br />
+        <br />
+        <StoreController />
+      </div>
     </>
   );
 }
