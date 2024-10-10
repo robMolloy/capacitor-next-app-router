@@ -2,7 +2,7 @@
 
 ## unresolved
 
-- dynamic routes???
+- dynamic routes??? not possible - have to use query params
 
 ## prerequisites
 
